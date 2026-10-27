@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Enrollly | Formulário de Matrícula</title>
+  <meta
+    name="description"
+    content="Formulário de matrícula escolar responsivo desenvolvido com HTML e CSS."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="pagina">
+    <aside class="painel-lateral">
+      <a class="logo" href="#" aria-label="Enrollly, página inicial">
+        enrollly<span>.</span>
+      </a>
+
+      <div class="apresentacao">
+        <p class="etiqueta">SUA NOVA JORNADA COMEÇA AQUI</p>
+        <h1>Faça sua matrícula e transforme seu futuro.</h1>
+        <p>
+          Preencha seus dados para iniciar sua jornada com a gente.
+          É rápido e simples!
+        </p>
+      </div>
+
+      <p class="rodape-lateral">Enrollly · Educação que transforma</p>
+    </aside>
+
+    <main class="conteudo">
+      <header class="cabecalho-formulario">
+        <p class="etiqueta">FORMULÁRIO DE INSCRIÇÃO</p>
+        <h2>Formulário de matrícula</h2>
+        <p>Preencha as informações abaixo para realizar sua inscrição.</p>
+      </header>
+
+      <form id="formulario-matricula">
+       
+<fieldset>
+  <legend>Dados pessoais</legend>
+
+  <div class="campo">
+    <label for="nome">Nome completo *</label>
+    <input
+      type="text"
+      id="nome"
+      name="nome"
+      placeholder="Digite seu nome completo"
+      autocomplete="name"
+      required
+    >
+  </div>
+
+  <div class="grade-campos">
+    <div class="campo">
+      <label for="nascimento">Data de nascimento *</label>
+      <input
+        type="date"
+        id="nascimento"
+        name="nascimento"
+        autocomplete="bday"
+        required
+      >
+    </div>
+
+    <div class="campo">
+      <label for="telefone">Telefone *</label>
+      <input
+        type="tel"
+        id="telefone"
+        name="telefone"
+        placeholder="(61) 99999-9999"
+        autocomplete="tel"
+        inputmode="numeric"
+        maxlength="15"
+        required
+      >
+    </div>
+  </div>
+
+  <div class="campo">
+    <label for="email">E-mail *</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="voce@exemplo.com"
+      autocomplete="email"
+      required
+    >
+  </div>
+</fieldset>
+          <legend>Informações acadêmicas</legend>
+
+          <div class="campo">
+            <label for="curso">Curso desejado *</label>
+            <select id="curso" name="curso" required>
+              <option value="">Selecione um curso</option>
+              <option value="fundamental">Ensino fundamental</option>
+              <option value="medio">Ensino médio</option>
+              <option value="tecnico">Curso técnico</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="turno">Turno *</label>
+            <select id="turno" name="turno" required>
+              <option value="">Selecione um turno</option>
+              <option value="manha">Matutino</option>
+              <option value="tarde">Vespertino</option>
+              <option value="noite">Noturno</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="observacoes">Observações</label>
+            <textarea
+              id="observacoes"
+              name="observacoes"
+              rows="4"
+              placeholder="Conte-nos algo que considera importante..."
+            ></textarea>
+          </div>
+        </fieldset>
+
+        <p class="aviso">* Campos de preenchimento obrigatório.</p>
+
+        <button type="submit">Enviar matrícula <span>→</span></button>
+
+        <p id="mensagem-feedback" role="status" aria-live="polite" hidden></p>
+
+        <p class="nota-privacidade">
+          Seus dados serão utilizados apenas para fins de inscrição neste
+          protótipo.
+        </p>
+      </form>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
